@@ -1,59 +1,52 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<style>
-    nav{
-        display: flex;
-        flex-direction: row;
-
-    }
-    nav a{
-        margin: 10px;
-    }
-    .posts{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .post{
-        border: 1px solid gray;
-        margin-right: 20px;
-        min-width: 200px;
-        min-height: 200px;
-    }
-    .description{
-        
-        text-align: center;
-    }
-</style>
-<body>
+  <style>
+    nav{ display: flex; flex-direction: row; } nav a{ margin: 10px; } .posts{
+    display: flex; flex-direction: row; flex-wrap: wrap; } .post{ border: 1px
+    solid gray; margin-right: 20px; min-width: 200px; min-height: 200px; }
+    .description{ text-align: center; }
+  </style>
+  <body>
 
     <nav>
-        <a href="/">Home</a>
-        <a href="/create">Create</a>
-        <a href="/login">{{isAuth}}</a>
+      <a href="/">Home</a>
+      <a href="/create">Create</a>
+      <a href="/login">{{isAuth}}</a>
     </nav>
-    
+
     <h2>Posts</h2>
-    <div class="posts">
+    <div class="card d-flex" style="width: 18rem;">
 
-        {{#each posts}}
-            <div class="post">
+       
 
-                <h3 class="title">{{this.title}}</h3>
-                <p class="name">{{this.fullName}}</p>
-                <p class="description">{{this.description}}</p>
-                
-                   
-            </div>
-        {{/each}}
+      {{#each posts}}
+        <div class="card-body">
+          <img
+            class="card-img-top"
+            src="https://via.placeholder.com/150C/O https://placeholder.com/"
+            alt="Card image cap"
+          />
+          <h5 class="card-title">{{this.title}}</h5>
+          <p class="name">{{this.fullName}}</p>
+          <p class="card-text">{{this.description}}</p>
+
+        </div>
+      {{/each}}
 
     </div>
-</body>
+
+   
+
+    </div>
+  </body>
 </html>
